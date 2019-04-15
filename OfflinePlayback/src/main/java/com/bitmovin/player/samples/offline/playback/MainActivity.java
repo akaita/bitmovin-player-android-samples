@@ -25,6 +25,7 @@ import com.bitmovin.player.NoConnectionException;
 import com.bitmovin.player.api.event.data.ErrorEvent;
 import com.bitmovin.player.config.drm.WidevineConfiguration;
 import com.bitmovin.player.config.media.SourceItem;
+import com.bitmovin.player.offline.OfflineConfiguration;
 import com.bitmovin.player.offline.OfflineContentManager;
 import com.bitmovin.player.offline.OfflineContentManagerListener;
 import com.bitmovin.player.offline.OfflineSourceItem;
@@ -55,6 +56,11 @@ public class MainActivity extends AppCompatActivity implements OfflineContentMan
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        OfflineConfiguration offlineConfiguration = new OfflineConfiguration();
+        offlineConfiguration.setMaxSimultaneousDownloads(4);
+        offlineConfiguration.setMaxSimultaneousSegmentDownloads(4);
+        OfflineContentManager.setOfflineConfiguration(offlineConfiguration);
     }
 
     @Override
