@@ -373,9 +373,9 @@ public class MainActivity extends AppCompatActivity implements OfflineContentMan
         List<ListItem> listItems = new ArrayList<>();
 
         // Initialize a SourceItem
-        SourceItem artOfMotion = new SourceItem("https://bitmovin-a.akamaihd.net/content/MI201109210084_1/mpds/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.mpd");
+        SourceItem artOfMotion = new SourceItem("https://bitmovin-a.akamaihd.net/content/sintel/sintel.mpd");
         artOfMotion.setThumbnailTrack("https://bitmovin-a.akamaihd.net/content/MI201109210084_1/thumbnails/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.vtt");
-        artOfMotion.setTitle("Art of Motion");
+        artOfMotion.setTitle("Sintel");
 
         // Initialize an OfflineContentManager in the rootFolder with the id "artOfMotion"
         OfflineContentManager artOfMotionOfflineContentManager = OfflineContentManager.getOfflineContentManager(artOfMotion, this.rootFolder.getPath(), "artOfMotion", this, this);
